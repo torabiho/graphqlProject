@@ -1,0 +1,21 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+  padding: 20px;
+
+  /* If you want to center the grid: */
+  max-width: 1200px; /* Maximum width constraint for the container */
+  margin: auto; /* Center the container */
+}
+
+/** The CSS grid layout will automatically adjust the number of columns based on the screen size. 
+ *  However, you can further refine the responsiveness using media queries if needed. For example:
+ */
+
+/* @media (max-width: 600px) {
+  .grid-container {
+    // Stacks cards in a single column on small screens
+    grid-template-columns: 1fr; 
+  }
+} */

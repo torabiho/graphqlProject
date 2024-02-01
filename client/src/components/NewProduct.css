@@ -1,0 +1,69 @@
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+
+/* General form styling */
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+select[multiple] {
+  height: auto;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:disabled {
+  background-color: #ccc;
+}
+
+/* Error message styling */
+p {
+  color: #c62828;
+  margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  form {
+    padding: 10px;
+  }
+
+  input[type="text"],
+  textarea,
+  select {
+    padding: 8px;
+  }
+
+  button[type="submit"] {
+    padding: 8px 15px;
+  }
+}

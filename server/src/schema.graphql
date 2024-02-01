@@ -1,0 +1,56 @@
+type Query {
+  appName: String
+
+  allProducts: [Product!]!
+
+  allCategories: [Category!]!
+
+  productsByAuthor(authorName: String!): [Product!]!
+
+  productsByCategory(slug: String!): [Product!]!
+}
+
+type Product {
+  id: String!
+  name: String!
+  description: String!
+  url: String!
+  numberOfVotes: Int!
+  publishedAt: String!
+  author: User!
+  categories: [Category!]!
+}
+
+type User {
+  id: ID!
+  userName: String!
+  fullName: String!
+}
+
+type Category {
+  id: ID!
+  slug: String!
+  name: String!
+}
+
+# Mutations
+
+type Mutation {
+  createProduct(input: NewProduct!): Product!
+
+  createCategory(input: NewCategory!): Category!
+
+  upvoteProduct(productId: String!): Product
+}
+
+input NewProduct {
+  name: String!
+  description: String!
+  url: String!
+  categoriesIds: [ID!]!
+}
+
+input NewCategory {
+  slug: String!
+  name: String!
+}
